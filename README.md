@@ -10,7 +10,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://mhnoor-stock-tracker-cc0e1eaa2176.herokuapp.com/)
 
 ## Getting Started
 
