@@ -2,8 +2,13 @@
 
 .search-area {
   padding-top: 50px;
+  margin-bottom: 1rem;
 }
 
 .no-right-padding {
   padding-right: 0 !important;
+}
+
+.result-block {
+  display: inline-block !important;
 }
