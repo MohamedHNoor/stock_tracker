@@ -1,0 +1,27 @@
+<div class="result-block">
+  <%= render "layouts/messages"%>
+</div>
+<% if @friends %>
+  <div class="card card-header result-block">
+    <table class="table table-hover col-md-10">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @friends.each do |friend| %>
+          <tr>
+            <td><%= friend.full_name %></td>
+            <td> <%= friend.email %></td>
+            <td> <%= link_to 'View Profile', "#", class: "btn btn-sm btn-outline-success" %>
+              <%= link_to "Follow friend?", "#", class: "btn btn-sm btn-outline-success", method: :post %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+<% end %>

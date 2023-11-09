@@ -7,7 +7,7 @@
     <strong>Name: <%= @stock.name %></strong>
     <strong>Price: <%= @stock.last_price %></strong>
     <% if current_user.can_track_stock?(@stock.ticker) %>
-      <%= link_to "add to portfolio", user_stocks_path(user: current_user, ticker: @stock.ticker), class: "btn btn-success", method: :post %>
+      <%= link_to "add to portfolio", user_stocks_path(user: current_user, ticker: @stock.ticker), class: "btn btn-sm btn-outline-success", method: :post %>
     <% else %>
       <span class="badge rounded-pill text-bg-secondary">
         You're already tracking
