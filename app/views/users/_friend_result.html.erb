@@ -17,7 +17,11 @@
             <td><%= friend.full_name %></td>
             <td> <%= friend.email %></td>
             <td> <%= link_to 'View Profile', "#", class: "btn btn-sm btn-outline-success" %>
-              <%= link_to "Follow friend?", "#", class: "btn btn-sm btn-outline-success", method: :post %>
+              <% if current_user.not_friends_with?(friend.id) %>
+                <%= link_to "Follow friend?", friendships_path(friend: friend), class: "btn btn-sm btn-outline-success", method: :post %>
+              <% else %>
+                <span class="badge bg-secondary">You are friends</span>
+              <% end %>
             </td>
           </tr>
         <% end %>
